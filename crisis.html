@@ -1,0 +1,98 @@
+<!doctype html>
+<script>
+  var hiddenTexts = ['11', '22', '33', '44', '55', '66', '77', '88', '99', '100', '110', '120'];
+</script>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/crisis.css">
+    <title>30 Second Crisis</title>
+  </head>
+  <body class="dark-mode">
+    <h1 class="text-center my-4" style="font-size: 4rem;">30 Second Crisis</h1>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="toast text-center" data-delay="10000" style="position: absolute; min-width: 100%; color: black;">
+        <button type="button" class="mr-2 mb-1 close" data-dismiss="toast">&times;</button>
+        <div class="toast-body display-2" id="toast-text">
+          Default toast text here.
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto triangle-border">
+      <div class="mx-auto triangle" style="z-index: 1;"></div>
+    </div>
+    <div align="center">
+      <div class="wheel-background"></div>
+      <canvas id="canvas" width="900" height="500" data-responsiveMinWidth="180" data-responsiveScaleHeight="true" data-responsiveMargin="50" onClick="startSpin();"></canvas>
+    </div>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col col-md-6 offset-md-3">
+          <button id="showToast" class="btn btn-danger btn-lg w-100 mx-auto font-weight-bold" type="button" disabled>Stop Wheel</button>
+        </div>
+      </div>
+    </div>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col col-md-8 display-1 text-center offset-md-2">
+          <div id="myTimer">
+            <p class="display-1" id='timer'></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col col-md-4 offset-md-2">
+          <input id="stopTimer" class="btn btn-danger btn-lg w-100 mx-auto font-weight-bold" type="button" value="Stop" disabled></input>
+        </div>
+        <div class="col col-md-4">
+          <input class="btn btn-secondary btn-lg w-100 mx-auto font-weight-bold" type="button" value="Reset"></input>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col col-md-8 offset-md-2">
+          <table class="table table-dark table-striped" id="points-table">
+            <thead>
+              <tr>
+                <th scope="col">Player Name</th>
+                <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tr>
+              <td scope="row">Mark</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td scope="row">Kiely</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td scope="row">Lindsay</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td scope="row">Michael</td>
+              <td>0</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Winwheel and TweenMax dependency -->
+    <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel@2.8.0/Winwheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script  src="./resources/js/crisis.js"></script>
+  </body>
+</html>
