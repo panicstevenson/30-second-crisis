@@ -26,9 +26,15 @@
     </div>
     <div id="settings-menu" class="ui fluid bottom popup basic transition" style="margin-top:51px; max-width: 30%; left: 0px;" >
       <div class="column">
-        <h4 class="ui header">Settings</h4>
-        <div class="ui link list inverted">
-          <a class="item">Save</a>
+        <div class="ui link list">
+          <div class="active item">Settings</div>
+          <a class="item">Save Scores</a>
+          <a id="loadWheelBtn" class="item">
+            <div class="content">
+              <label for="file-upload" style="cursor: pointer;">Load Wheel</label>
+              <input id="file-upload" type="file"/>
+            </div>
+          </a>
         </div>
       </div>
     </div>

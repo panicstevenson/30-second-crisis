@@ -1,3 +1,7 @@
+input[type="file"] {
+    display: none;
+}
+
 /* Downward triangle CSS to show where the spinner stopped */
 .triangle {
     width: 0;

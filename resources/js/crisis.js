@@ -144,6 +144,14 @@ resetTimer()
 $('input[value="Stop"]').on('click', stopTimer)
 $('input[value="Reset"]').on('click', resetTimer)
 $('input[value="Stop Wheel"]').on('click', stopWheel)
+document.getElementById("loadWheelBtn").addEventListener("change", handleWheelFileChange, false);
+
+function handleWheelFileChange(){
+  alert('loadWheel called');
+
+  // Hide hamburger menu
+  neatFunc();
+}
 
 function stopWheel() {
   // Short-circuit if you haven't reset the timer.
