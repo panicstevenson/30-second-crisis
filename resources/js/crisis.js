@@ -147,7 +147,8 @@ $('input[value="Stop Wheel"]').on('click', stopWheel)
 document.getElementById("loadWheelBtn").addEventListener("change", handleWheelFileChange, false);
 
 function handleWheelFileChange(){
-  alert('loadWheel called');
+  const selectedFile = document.getElementById('wheel-file').files[0];
+  alert('picked file: ' + selectedFile.name);
 
   // Hide hamburger menu
   neatFunc();
