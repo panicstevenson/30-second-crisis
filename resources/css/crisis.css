@@ -6,7 +6,7 @@
     border-right: 25px solid transparent;
     border-top: 35px solid #f2f2f2;
     margin-bottom: -25px;
-    top: -36px;
+    top: -37px;
     left: -25px;
     float: center;
     position: relative;
@@ -20,26 +20,11 @@
     border-top: 40px solid #000;
     margin-bottom: -25px;
     float: center;
+    left: -15px;
     position:relative;
 }
 
 .dark-mode {
     color: #fdfdfd;
     background-color: #101010;
-}
-
-.wheel-background {
-    background-color: white;
-    width: 496px;
-    height: 496px;
-    margin-left: -248px;
-    margin-top: -519px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    border: 2px solid white;
-    position:absolute;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px 10px #000;
-    z-index: -1;
 }

@@ -1,0 +1,136 @@
+<!doctype html>
+<script>
+  var hiddenTexts = ['11', '22', '33', '44', '55', '66', '77', '88', '99', '100', '110', '120'];
+
+  function neatFunc() {
+    $("#settings-menu").toggleClass( 'visible' );
+  }
+</script>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Semantic CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/crisis.css">
+    <title>30 Second Crisis</title>
+  </head>
+  <body style="background-color: black;">
+
+    <div class="ui massive inverted menu" style="position: relative; z-index: 2;">
+      <a class="browse item active visible" onClick="neatFunc();">
+        <i class="bars icon"></i>
+      </a>
+    </div>
+    <div id="settings-menu" class="ui fluid bottom popup basic transition" style="margin-top:51px; max-width: 30%; left: 0px;" >
+      <div class="column">
+        <h4 class="ui header">Settings</h4>
+        <div class="ui link list inverted">
+          <a class="item">Save</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui fluid floating massive message hidden" style="position: absolute; z-index: 2; left: 50%; margin-top: -40px; margin-left: -450px; min-width: 900px; max-width: 900px;">
+      <i class="close icon"></i>
+      <div class="ui center aligned header toast-body" style="font-size: 4rem;">
+        Do the thing! Do the thing! Do the thing! Do the thing! Do the thing! 
+      </div>
+      <div class="ui center aligned page" style="font-size: 2rem;">
+        <p>Or take a shot!</p>
+      </div>
+    </div>
+
+    <div class="ui grid center aligned">
+      <div class="ui raised inverted segment" style="margin-top: -51px; min-height: 100vh; overflow: hidden;">
+        <h1 class="ui center aligned header" style="margin-top: 51px; font-size: 6rem;">30 Second Crisis</h1>
+        <!-- <div class="ui container" style="position: relative; z-index: 2;">
+
+
+
+
+          <div class="toast text-center" data-delay="10000" style="position: absolute; min-width: 100%; color: black;">
+            <button type="button" class="mr-2 mb-1 close" data-dismiss="toast">&times;</button>
+            <div class="toast-body display-2" id="toast-text">
+              Default toast text here.
+            </div>
+          </div>
+        </div> -->
+        <div class="ui center aligned grid">
+          <div class="one wide column">
+            <div class="ui center aligned triangle-border">
+              <div class="ui center aligned triangle" style="z-index: 1;"></div>
+            </div>
+          </div>
+        </div>
+        <div align="center">
+          <div class="wheel-background"></div>
+          <canvas id="canvas" width="900" height="500" data-responsiveMinWidth="180" data-responsiveScaleHeight="true" data-responsiveMargin="50" onClick="startSpin();"></canvas>
+        </div>
+        <div class="ui grid" style="margin-top: 30px;">
+          <div class="five wide column"></div>
+          <div class="six wide column">
+            <button id="showToast" class="ui huge fluid red button" type="button" disabled>Stop Wheel</button>
+          </div>
+        </div>
+        <div class="ui grid">
+          <div class="three wide column"></div>
+          <div class="ten wide column center aligned">
+            <div id="myTimer" style="font-size: 6rem;">
+              <p id='timer'></p>
+            </div>
+          </div>
+        </div>
+        <div class="ui grid">
+          <div class="four wide column"></div>
+          <div class="four wide column">
+            <input id="stopTimer" class="ui huge fluid red button" type="button" value="Stop" disabled></input>
+          </div>
+          <div class="four wide column">
+            <input class="ui huge fluid button testBtn" type="button" value="Reset"></input>
+          </div>
+        </div>
+        <div class="ui grid" style="margin-top: 40px;">
+          <div class="three wide column"></div>
+          <div class="ten wide column">
+            <table class="ui inverted single line table" id="points-table">
+              <thead>
+                <tr>
+                  <th>Player Name</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tr>
+                <td>Mark</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td scope="row">Kiely</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td scope="row">Lindsay</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td scope="row">Michael</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Winwheel and TweenMax dependency -->
+    <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel@2.8.0/Winwheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- jQuery first then Semantic -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script  src="./resources/js/crisis.js"></script>
+  </body>
+</html>

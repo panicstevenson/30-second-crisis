@@ -2,6 +2,18 @@ $("#showToast").click(function() {
   stopWheel();
 });
 
+$('.message .close').on('click', function() {
+  $(this)
+    .closest('.message')
+    .transition('fade')
+  ;
+});
+
+$('.testBtn').on('click', function() {
+  $('.message').transition('fade down')
+  setTimeout(function(){ $('.message').transition('fade down') }, 12000)
+});
+
 // TODO: Probably all of this on page load
 var numSegments = 12
 var segments = []
@@ -32,6 +44,8 @@ var theWheel = new Winwheel({
   'outerRadius': 240, // Set outer radius so wheel fits inside the background.
   'textFontSize': 28, // Set font size as desired.
   'responsive': true, // This wheel is responsive!
+  'lineWidth': 2,
+  'strokeStyle': 'white',
   'segments': segments, // Define segments including colour and text.
   'animation': {
     'type': 'spinOngoing', // Don't stop until we hit the stop button.
