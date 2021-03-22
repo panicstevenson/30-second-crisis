@@ -9,10 +9,10 @@ $('.message .close').on('click', function() {
   ;
 });
 
-$('.testBtn').on('click', function() {
-  $('.message').transition('fade down')
-  setTimeout(function(){ $('.message').transition('fade down') }, 12000)
-});
+// $('.testBtn').on('click', function() {
+//   $('.message').transition('fade down')
+//   setTimeout(function(){ $('.message').transition('fade down') }, 12000)
+// });
 
 // TODO: Probably all of this on page load
 var numSegments = 12
@@ -108,9 +108,10 @@ function alertPrize() {
 // Displays a toast message with the hidden text from the segment the wheel landed on.
 function displayToast(landedSegment) {
   $('#toast-text').text(landedSegment.hiddenText);
-  $('.toast').toast('show')
+  $('#toasty').animate({ opacity: 1 }, "fast");
   resetAnimationValues()
   setTimeout(startTimer, 400);
+  setTimeout(() => $('#toasty').animate({ opacity: 0 }, "slow"), 5400);
 }
 
 // TODO: Probably better to have this be an initialize function so the values don't have to be duplicated.
@@ -168,6 +169,7 @@ function resetTimer() {
   currentTime = startTime
   $('#timer').html(currentTime / 10 + " seconds")
   $('#timer').css('color', 'white');
+  $('#toasty').animate({ opacity: 0 }, 0);
 }
 
 function startTimer() {
